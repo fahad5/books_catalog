@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<title>{{categoryName}} books</title>
+	
+
+
+
+		<div class="category-items column column-75">
+			<div class="category-items__list">
+				<ul class="list__items">
+					{% for book in books %}
+						<a href="{{url_for('showCategoryItem', catalog_id = book.category_id ,item_id = book.id )}}">
+							<li class="items__item">
+								<span class="item__name">{{book.name}}</span>
+							</li>
+						</a>
+					{% endfor %}
+
+
+
+									{% if CountBooks==0 %}
+									<div class="wrapper">
+
+									<span class="item__name">
+								<h5 class="title__text">There is no books to show in {{categoryName}} </h></span><br></div>
+								{% endif %}
+
+					{% if 'username' in session %}
+
+							
+					<a href="{{url_for('addCategoryItem')}}" class="button u list__add">Add a Book</a>
+				{% endif %}
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<title>Home</title>
+
+<div class="about-us-container section-container section-container-gray-bg">
+
+              <div class="about-us-box-text">
+                    <p class="medium-paragraph">
+                    		<div class="category-items column column-75">
+			<div>
+				
+				<ul>
+					{% for book in books %}
+						<a href="{{url_for('showCategoryItem', catalog_id = book.category_id ,item_id = book.id )}}">
+							<li>
+								<span>{{book.name}}</span>
+							</li>
+						</a>
+					{% endfor %}
+				</ul>
+
+
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+
+
+
+	
+
+
+					{% if 'username' in session %}
+
+					<a href="{{url_for('addCategoryItem')}}" class="button u list__add">Add a Book</a>
+
+				{% endif %}
+				</div>
+			</div>
+<!-- 		</div>
+ -->	</div>
+</div>
+
+{% endblock %}
