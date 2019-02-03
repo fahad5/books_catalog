@@ -1,10 +1,11 @@
-Item Catalog Web App
-This web app is a project for the Udacity https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004
+
+
 
 This project is a RESTful web application utilizing the Flask framework which accesses a SQL database 
 that populates categories and their items. OAuth2 provides authentication for further CRUD 
 functionality on the application. Currently OAuth2 is implemented for Google Accounts.
-
+![alt text](http://a.up-00.com/2019/02/154921964057331.png)
+![alt text](http://a.up-00.com/2019/02/154921964323872.png)
 
 To work in this project you should indtall 
 Vagrant :https://www.vagrantup.com/
